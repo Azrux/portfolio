@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>LM Web Dev</title>
+</head>
+<body>
+
+  <!-- INITIAL SECTION -->
+  <section id="initial">
+    <div class="content">
+      <header>
+        <div class='content-header'>
+          <h1>Laura Marcenaro</h1>
+          <nav id="nav" class="">
+            <ul id="links">
+              <li><a href='#initial' class="selected" onclick="selected(this)">INICIO</a></li>
+              <li><a href='#about' onclick="selected(this)">SOBRE MI</a></li>
+              <li><a href='#skills' onclick="selected(this)">HABILIDADES</a></li>
+              <li><a href='#projects' onclick="selected(this)">PROYECTOS</a></li>
+              <li><a href='#contact' onclick="selected(this)">CONTACTO</a></li>
+            </ul>
+          </nav>
+
+          <!-- RESPONSIVE MENU ICONS -->
+          <div id="nav-icon" onclick="responsiveMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+          <!-- SOCIAL MEDIA ICONS -->
+            <div class="social">
+              <a href='https://www.linkedin.com/in/laura-marcenaro/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+              <a href='https://github.com/Azrux' target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+
+
+        </div>
+      </header>
+      <div class="introduction">
+        <p class="welcome">Bienvenidos</p>
+        <h2>Soy <span>Laura Marcenaro</span>, Desarrolladora Web Full Stack</h2>
+        <p class="description">
+          Tengo 29 años, soy de Buenos Aires, Argentina.
+          <br>
+          Empecé a estudiar HTML y CSS de manera autodidacta a los 15 años.
+          <br>
+          En diciembre de 2022 se me presentó la oportunidad y me anoté al bootcamp de Henry para estudiar programación.
+        </p>
+        <a href="#projects">Proyectos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about">
+    <div class="photo-container">
+      <img src="./img/perfil linkedin.jpg" alt="profile picture">
+    </div>
+    <div class="about">
+      <p href="" class="title-section">Sobre mi</p>
+      <h2>🖐 Hola, soy <span>Laura Marcenaro</span></h2>
+      <h3>Desarrolladora Web Full Stack</h3>
+      <p>
+        🎹 <br>
+        Hasta hace poco me dedicaba a dar clases de piano en una escuela privada cerca del barrio en el que vivo. Intenté en algún momento entrar a la universidad para estudiar algo relacionado a sistemas, pero la vida me llevó a estudiar piano en un conservatorio y me encuentro agradecida de ello. Descubrí que me gusta mucho tocar el piano, sin embargo, había elegido un profesorado como carrera y al poco tiempo me di cuenta que no quería dar clases toda la vida. <strike> Ni tenía la paciencia para dedicarme 12hs diarias a tocar el piano para poder vivir de eso. </strike>
+        <br>
+        <br>
+        💻 <br>
+         Afortunadamente un familiar me recomendó Henry y me reencontré con la programación. Ese fue el empujoncito que necesitaba para decidir cambiar mi futuro profesional.
+         Había tenido un muy buen primer contacto con HTML y CSS a los 15 años. Aunque la tecnología avanzó mucho desde entonces, me alegra estar redescubriendo este mundo ♥.
+        <br>
+        <br>
+        💰<br>
+        Ingresé al bootcamp de Henry pensando, principalmente, en conseguir un empleo mejor remunerado que el que tengo en este momento.
+        Es así como al día de hoy, y después de más de 9 largos e intensos meses de pelearme conmigo misma y con el código, me encuentro buscando un trabajo en el ámbito de la programación. 
+        <br>
+        <br>
+        🤓<br>
+        El piano es un instrumento bastante solitario... En mi paso por el bootcamp descubrí que me gusta trabajar en grupo y siempre estoy dispuesta a ayudar a los demás. Soy también responsable y dedicada a mis tareas. Cuento con conocimientos en <b>HTML, CSS, JavaScript, TypeScript, Bootstrap, React, Redux, NodeJS, Express, SQL, Sequelize</b> y tengo algunos proyectos y más tecnologías en la mira.
+        También se utilizar <b>Postman, Trello</b> y<strike> (no soy para nada experta porque me falta práctica grupal)</strike> conozco un poquito de qué se trata <b>SCRUM</b> porque fue obligatorio durante el proyecto de egreso. 
+        <br>
+        <br>
+        📧<br>
+        Si querés saber más sobre mi, podés contactarme al mail: lausofimarce@gmail.com
+        O revisar mi GitHub en donde vas a poder ver proyectos que voy subiendo: https://github.com/Azrux
+        <br>
+        Gracias por leer ♥</p>
+      <a href="https://drive.google.com/file/d/1uKaQbEFrP4yp8xAKWZtDYSVszVr0CKSa/view?usp=share_link" target="_blank">Descargar CV</a>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills">
+    <h3 class="title-section">Habilidades</h3>
+    <div class="row">
+      <div class="skill">
+        <h4>Habilidades técnicas</h4>
+          <hr>    
+          <span class="icon"><img src='./Logos/css3.svg' title='CSS' alt='css'/></span>
+            <!-- <span class="icon"><img src='./Logos/cssmodules.svg' title='CSS modules' alt='cssModules'/></span> -->
+            <span class="icon"><img src='./Logos/bootstrap.svg' title='Bootstrap' alt='bootstrap'/></span>
+            <span class="icon"><img src='./Logos/html5.svg' title='HTML 5' alt='html5'/></span>
+            <span class="icon"><img src='./Logos/javascript.svg' title='JavaScript' alt='javascript'/></span>
+            <span class="icon"><img src='./Logos/react.svg' title='ReactJs' alt='react'/></span>
+            <span class="icon"><img src='./Logos/redux.svg' title='Redux' alt='redux'/></span>
+            <span class="icon"><img src='./Logos/nodedotjs.svg' title='Node.js' alt='nodeJs'/></span>
+            <span class="icon"><img src='./Logos/express.svg' title='Express.js' alt='express'/></span>
+            <span class="icon"><img src='./Logos/postgresql.svg' title='PostgreSQL' alt='postgres'/></span>
+            <span class="icon"><img src='./Logos/sequelize.svg' title='Sequelize' alt='sequelize'/></span>
+            <span class="icon"><img src='./Logos/git.svg' title='Git' alt='git'/></span>
+      </div>
+      <div class="skill">
+        <h4>Habilidades blandas</h4>
+          <hr>
+          <span class="soft">🤔</span>
+          <p>Análisis de problemas</p>
+          <span class="soft">🤓</span>
+          <p>Aprendizaje ágil</p>
+          <span class="soft">🤝</span>
+          <p>Colaboración</p>
+          <span class="soft">🧠</span>
+          <p>Pensamiento lógico</p>
+          <span class="soft">📅</span>
+          <p>Planificación y organización</p>
+          <span class="soft">🤜🤛</span>
+          <p>Trabajo en equipo</p>
+          <span class="soft">🎯</span>
+          <p>Tenacidad</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <h3 class="title-section">MIS PROYECTOS</h3>
+    <div class="row">
+      <div class="project">
+        <div class="overlay"></div>
+ 
+          <img src="./img/LandingPI.png" alt="Proyecto: Countries!">
+      
+            
+       
+        <div class="info">
+          <h4>Countries!</h4>
+          <P>Es una App Full Stack. Utilicé:<br>HTML, CSS, Javascript, React, Redux, Node.Js, Express.Js, PostgreSQL, Sequelize, API "REST countries"
+            <br>
+            <div class="links">
+              <a href="https://countriesaroundtheworld.netlify.app/">Deploy</a>
+              <p>||</p>
+              <a href="https://github.com/Azrux/Countries">Repositorio</a></P>
+            </div>
+        </div>
+      </div>
+      <div class="project">
+        <div class="overlay"></div>
+        <img src="./img/LandingPF.png" alt="Proyecto: Club Athenas">
+        <div class="info">
+          <h4>Club Athenas</h4>
+          <P>Es una App Full Stack hecha en grupo. Utilizamos:<br>HTML, Bootstrap, Javascript, React, Redux, Node.Js, Express.Js, PostgreSQL, Sequelize, Auth0, pasarela de pagos "Mercado Pago"
+            <br>
+            <div class="links">
+              <a href="https://github.com/MATarg81/proyecto-final">Repositorio</a></P>
+            </div></P>
+        </div>
+      </div>
+      <div class="project">
+        <div class="overlay"></div>
+        <img src="./img/Tasks.png" alt="Proyecto: Tasks">
+        <div class="info">
+          <h4>Tasks</h4>
+          <P>Es una App sencilla, solo front. Utilicé:<br>TypeScript, React y Bootstrap
+            <br>
+            <div class="links">
+              <a href="https://github.com/Azrux/Tasks">Repositorio</a></P>
+            </div></P>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <h3 class="title-section">Contactame</h3>
+    <div class="form-container">
+      <form action="https://formsubmit.co/lausofimarce@gmail.com" method="POST">
+        <div class="half row">
+          <input type="text" placeholder="Nombre..." class="half-input" name="name">
+          <input type="text" placeholder="Email..." class="half-input" name="email">
+        </div>
+        <div class="row">
+          <input type="text" placeholder="Asunto..." class="full-input" name="asunto">
+        </div>
+        <div class="row">
+          <textarea name="msg" id="" cols="" rows="" placeholder="Escribe el mensaje aquí..." class="full-input"></textarea>
+        </div>
+
+        <input type="submit" value='Eviar' class="send-btn">
+
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+        <input type="hidden" name="_captcha" value="false">
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <P>Con <span>♥</span> Lau - 2023</P>
+    <div class="social">
+      <a href='https://www.linkedin.com/in/laura-marcenaro/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href='https://github.com/Azrux' target="_blank"><i class="fa-brands fa-square-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
