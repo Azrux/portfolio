@@ -311,14 +311,17 @@ html {
 
 #projects .row {
     display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    justify-items: center;
+    margin: 10px 0;
 }
 
 #projects .row .project {
     max-width: 450px;
     border: 1px solid #000;
-    margin: 0 10px;
+    margin: 10px 10px;
     position: relative;
     overflow: hidden;
 }
@@ -528,6 +531,9 @@ footer a:hover {
     }
     #projects .row .project {
         margin: 10px auto;
+    }
+    #projects .row .project img {
+        display: block;
     }
     #contact {
         padding: 50px 15px;
