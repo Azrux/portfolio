@@ -14,14 +14,14 @@ html {
 
 /* INITIAL SECTION */
 
-#initial {
+#home {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./img/background.jpg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
 }
 
-#initial .content header {
+#home .content header {
     background-color: rgba(0,0,0,0.8);
     position: fixed;
     width: 100%;
@@ -29,7 +29,7 @@ html {
     top: 0;
 }
 
-#initial .content header .content-header {
+#home .content header .content-header {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -38,17 +38,17 @@ html {
     padding: 10px 20px;
 }
 
-#initial .content header .content-header h1 {
+#home .content header .content-header h1 {
     text-align: center;
     color: #ff5080;
 }
-#initial .content header .content-header nav ul {
+#home .content header .content-header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
 
-#initial .content header .content-header nav ul li a {
+#home .content header .content-header nav ul li a {
     text-decoration: none;
     color: #fff;
     margin: 0 12px;
@@ -56,11 +56,11 @@ html {
     transition: 0.5s;
 }
 
-#initial .content header .content-header nav ul li a:hover {
+#home .content header .content-header nav ul li a:hover {
     color: #ff5080;
 }
 
-#initial .content header .content-header .social a {
+#home .content header .content-header .social a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
@@ -68,15 +68,15 @@ html {
     transition: 0.5s;
 }
 
-#initial .content header .content-header .social a:hover{
+#home .content header .content-header .social a:hover{
     color: #ff5080;
 }
 
-#initial .content header .content-header .selected {
+#home .content header .content-header .selected {
     color: #ff5080;
 }
 
-#initial .content .introduction {
+#home .content .introduction {
     max-width: 1100px;
     height: 100vh;
     margin: auto;
@@ -87,33 +87,33 @@ html {
     justify-content: center;
 }
 
-#initial .content .introduction .welcome {
+#home .content .introduction .welcome {
     font-size: 16px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
-#initial .content .introduction h2
+#home .content .introduction h2
  {
     font-size: 55px;
     margin-bottom: 25px;
     text-align: center;
 }
 
-#initial .content .introduction h2 span {
+#home .content .introduction h2 span {
     font-size: 50px;
     color: #ff5080;
 }
 
-#initial .content .introduction .description {
+#home .content .introduction .description {
     max-width: 700px;
     margin: 25px;
     font-size: 18px;
     text-align: center;
 }
 
-#initial .content .introduction a {
+#home .content .introduction a {
     text-decoration: none;
     display: inline-block;
     margin: 25px;
@@ -126,7 +126,7 @@ html {
     transition: 0.5s;
 }
 
-#initial .content .introduction a:hover {
+#home .content .introduction a:hover {
     background-color: #ff5080;
 }
 
