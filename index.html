@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Laura Marcenaro — Software Engineer Full Stack JavaScript/TypeScript. React, Node.js, GraphQL. Buenos Aires, Argentina.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <title>LM Web Dev</title>
+    <title>Laura Marcenaro — Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="img/code-solid.svg">
 </head>
 <body>
 
   <!-- INITIAL SECTION -->
   <section id="home">
+    <canvas id="hero-canvas"></canvas>
     <div class="content">
       <header>
         <div class='content-header'>
-          <h1>Laura Marcenaro</h1>
+          <a href="#home" class="logo">Laura Marcenaro</a>
           <nav id="nav" class="">
             <ul id="links">
               <li><a href='#home' class="selected" onclick="selected(this)">INICIO</a></li>
-              <li><a href='#about' onclick="selected(this)">SOBRE MI</a></li>
+              <li><a href='#about' onclick="selected(this)">SOBRE MÍ</a></li>
+              <li><a href='#experience' onclick="selected(this)">EXPERIENCIA</a></li>
               <li><a href='#skills' onclick="selected(this)">HABILIDADES</a></li>
               <li><a href='#projects' onclick="selected(this)">PROYECTOS</a></li>
               <li><a href='#contact' onclick="selected(this)">CONTACTO</a></li>
@@ -38,20 +44,19 @@
               <a href='https://github.com/Azrux' target="_blank"><i class="fa-brands fa-square-github"></i></a>
             </div>
 
-
         </div>
       </header>
       <div class="introduction">
-        <p class="welcome">Bienvenidos</p>
-        <h2>Soy <span>Laura Marcenaro</span>, Desarrolladora Web Full Stack</h2>
+        <p class="welcome">Software Engineer</p>
+        <h1>Laura <span>Marcenaro</span></h1>
         <p class="description">
-          Tengo 29 años, soy de Buenos Aires, Argentina.
-          <br>
-          Empecé a estudiar HTML y CSS de manera autodidacta a los 15 años.
-          <br>
-          En diciembre de 2022 se me presentó la oportunidad y me anoté al bootcamp de Henry para estudiar programación.
+          Full Stack JavaScript/TypeScript. Más de 3 años construyendo y manteniendo productos SaaS
+          para startups de Estados Unidos — React, Node.js y arquitecturas GraphQL, desde Buenos Aires, Argentina.
         </p>
-        <a href="#projects">Proyectos</a>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">Ver proyectos</a>
+          <a href="assets/Laura-Marcenaro-CV.pdf" target="_blank" class="btn-secondary">Descargar CV</a>
+        </div>
       </div>
     </div>
   </section>
@@ -59,143 +64,199 @@
   <!-- ABOUT ME SECTION -->
   <section id="about">
     <div class="photo-container">
-      <img src="./img/perfil linkedin.jpg" alt="profile picture">
+      <img src="./img/perfil linkedin.jpg" alt="Foto de perfil de Laura Marcenaro">
     </div>
     <div class="about">
-      <p href="" class="title-section">Sobre mi</p>
-      <h2>🖐 Hola, soy <span>Laura Marcenaro</span></h2>
-      <h3>Desarrolladora Web Full Stack</h3>
+      <p class="title-section">Sobre mí</p>
+      <h2>Hola, soy <span>Laura Marcenaro</span></h2>
+      <h3>Software Engineer — Full Stack JavaScript/TypeScript</h3>
       <p>
-        🎹 <br>
-        Hasta hace poco me dedicaba a dar clases de piano en una escuela privada cerca del barrio en el que vivo. Intenté en algún momento entrar a la universidad para estudiar algo relacionado a sistemas, pero la vida me llevó a estudiar piano en un conservatorio y me encuentro agradecida de ello. Descubrí que me gusta mucho tocar el piano, sin embargo, había elegido un profesorado como carrera y al poco tiempo me di cuenta que no quería dar clases toda la vida. <strike> Ni tenía la paciencia para dedicarme 12hs diarias a tocar el piano para poder vivir de eso. </strike>
-        <br>
-        <br>
-        💻 <br>
-         Afortunadamente un familiar me recomendó Henry y me reencontré con la programación. Ese fue el empujoncito que necesitaba para decidir cambiar mi futuro profesional.
-         Había tenido un muy buen primer contacto con HTML y CSS a los 15 años. Aunque la tecnología avanzó mucho desde entonces, me alegra estar redescubriendo este mundo ♥.
-        <br>
-        <br>
-        💰<br>
-        Ingresé al bootcamp de Henry pensando, principalmente, en conseguir un empleo mejor remunerado que el que tenía en ese momento.
-        Es así como al día de hoy, y después de más de 9 largos e intensos meses de pelearme conmigo misma y con el código, me encuentro buscando un trabajo en el ámbito de la programación. 
-        <br>
-        <br>
-        🤓<br>
-        El piano es un instrumento bastante solitario... En mi paso por el bootcamp descubrí que me gusta trabajar en grupo y siempre estoy dispuesta a ayudar a los demás. Soy también responsable y dedicada a mis tareas. Cuento con conocimientos en <b>HTML, CSS, JavaScript, TypeScript, Bootstrap, React, Redux, NodeJS, Express, SQL, Sequelize</b> y tengo algunos proyectos y más tecnologías en la mira.
-        También se utilizar <b>Postman, Trello</b> y alguito de metodología <b>SCRUM</b>. 
-        <br>
-        <br>
-        📧<br>
-        Si querés saber más sobre mi, podés contactarme al mail: <b>lausofimarce@gmail.com</b>
-        <br>
-        Revisar mi <b>GitHub</b> en donde vas a poder ver proyectos que voy subiendo: <b>https://github.com/Azrux</b>
-        <br>
-        O dejarme un mensaje en la sección <a href="#contact" class="contactMe">CONTACTO</a> de este mismo proyecto
-        <br>
-        <br>
-        Gracias por leer ♥</p>
-      <a href="https://drive.google.com/file/d/1jPLOEFvHBsKlfjX0xaVp2-VnyvkBwsYs/view?usp=share_link" target="_blank" class="download">Descargar CV</a>
+        Tengo más de 3 años de experiencia construyendo y manteniendo productos SaaS para startups de Estados
+        Unidos, especializada en el ecosistema JavaScript/TypeScript: React, Node.js y arquitecturas GraphQL.
+        Trabajé en migraciones de sistemas, plataformas de suscripción e integraciones de datos/BI, siempre en
+        equipos remotos.
+        <br><br>
+        Llegué a la programación por un camino distinto: antes de esto daba clases de piano. Tuve mi primer
+        contacto con HTML y CSS a los 15 años, pero el camino me llevó primero al conservatorio. En 2022 volví a
+        la programación a través del bootcamp de Henry, y no paré desde entonces.
+        <br><br>
+        Hoy trabajo como Software Engineer en <b>Embeddables</b> (EE.UU., remoto), integrando plataformas de
+        salud (EHR/EMR) en soluciones web para clientes. Antes estuve en <b>Trades.org</b>, donde lideré
+        migraciones de backend, armé una librería de componentes reutilizables y diseñé un sistema de
+        suscripciones con Stripe.
+        <br><br>
+        Si querés saber más, revisá mi <b>GitHub</b>: <b>https://github.com/Azrux</b>, escribime a
+        <b>lausofimarce@gmail.com</b>, o dejame un mensaje en la sección
+        <a href="#contact" class="contactMe">CONTACTO</a> de este mismo sitio.
+      </p>
+      <a href="assets/Laura-Marcenaro-CV.pdf" target="_blank" class="download">Descargar CV</a>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience">
+    <h3 class="title-section">Experiencia</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h4>Software Engineer</h4>
+            <span class="timeline-date">Mar 2026 — Presente</span>
+          </div>
+          <p class="timeline-company">Embeddables · EE.UU. (Remoto)</p>
+          <ul>
+            <li>Lidero el desarrollo de herramientas y procesos internos para mejorar la productividad del equipo de ingeniería.</li>
+            <li>Construyo y mantengo funcionalidades en toda la plataforma, dando soporte a su estabilidad y escalabilidad.</li>
+            <li>Trabajo junto a producto y equipos de cliente para entregar soluciones escalables a clientes de salud en EE.UU.</li>
+            <li>Integro plataformas EHR/EMR en soluciones web para clientes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h4>Frontend Engineer</h4>
+            <span class="timeline-date">Mar 2025 — Mar 2026</span>
+          </div>
+          <p class="timeline-company">Embeddables · EE.UU. (Remoto)</p>
+          <ul>
+            <li>Implementé soluciones web a medida para clientes usando JavaScript y CSS sobre la plataforma low-code de la empresa.</li>
+            <li>Construí y personalicé componentes de UI avanzados para requerimientos no estándar.</li>
+            <li>Asistí al equipo en integraciones de API y resolución de problemas técnicos complejos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h4>Full Stack Software Engineer</h4>
+            <span class="timeline-date">Mar 2023 — Feb 2025</span>
+          </div>
+          <p class="timeline-company">Trades.org · EE.UU. (Remoto)</p>
+          <ul>
+            <li>Desarrollé funcionalidades frontend y backend para plataformas SaaS con React, Node.js, GraphQL y PostgreSQL.</li>
+            <li>Armé una librería de componentes reutilizable con Storybook para estandarizar la UI entre proyectos.</li>
+            <li>Migré el sitio de la empresa de JavaScript a TypeScript.</li>
+            <li>Lideré la migración de PostgreSQL a MongoDB y aporté a una arquitectura de microservicios con Apollo Federation.</li>
+            <li>Diseñé e implementé un sistema de suscripciones y facturación con Stripe.</li>
+            <li>Lideré una iniciativa de Business Intelligence con DBT, Metabase, Starburst y Fivetran.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <h4>Full Stack Teaching Assistant</h4>
+            <span class="timeline-date">Sep 2022 — May 2023</span>
+          </div>
+          <p class="timeline-company">SoyHenry Bootcamp · Buenos Aires, Argentina</p>
+          <ul>
+            <li>Mentoreé estudiantes durante el programa de Desarrollo Web Full Stack.</li>
+            <li>Ayudé con debugging, decisiones de arquitectura y ejercicios de código.</li>
+            <li>Facilité el aprendizaje colaborativo con pair programming.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
   <section id="skills">
     <h3 class="title-section">Habilidades</h3>
-    <div class="row">
-      <div class="skill">
-        <h4>Habilidades técnicas</h4>
-          <hr>    
-          <span class="icon"><img src='./Logos/css3.svg' title='CSS' alt='css'/></span>
-            <!-- <span class="icon"><img src='./Logos/cssmodules.svg' title='CSS modules' alt='cssModules'/></span> -->
-            <span class="icon"><img src='./Logos/bootstrap.svg' title='Bootstrap' alt='bootstrap'/></span>
-            <span class="icon"><img src='./Logos/html5.svg' title='HTML 5' alt='html5'/></span>
-            <span class="icon"><img src='./Logos/javascript.svg' title='JavaScript' alt='javascript'/></span>
-            <span class="icon"><img src='./Logos/typescript.svg' title='TypeScript' alt='typescript'/></span>
-            <span class="icon"><img src='./Logos/react.svg' title='ReactJs' alt='react'/></span>
-            <span class="icon"><img src='./Logos/redux.svg' title='Redux' alt='redux'/></span>
-            <span class="icon"><img src='./Logos/nodedotjs.svg' title='Node.js' alt='nodeJs'/></span>
-            <span class="icon"><img src='./Logos/express.svg' title='Express.js' alt='express'/></span>
-            <span class="icon"><img src='./Logos/postgresql.svg' title='PostgreSQL' alt='postgres'/></span>
-            <span class="icon"><img src='./Logos/sequelize.svg' title='Sequelize' alt='sequelize'/></span>
-            <span class="icon"><img src='./Logos/git.svg' title='Git' alt='git'/></span>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Frontend</h4>
+        <div class="pills">
+          <span class="pill">React</span>
+          <span class="pill">Next.js</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">Redux</span>
+          <span class="pill">TailwindCSS</span>
+        </div>
       </div>
-      <div class="skill">
-        <h4>Habilidades blandas</h4>
-          <hr>
-          <span class="soft">🤔</span>
-          <p>Análisis de problemas</p>
-          <span class="soft">🤓</span>
-          <p>Aprendizaje ágil</p>
-          <span class="soft">🤝</span>
-          <p>Colaboración</p>
-          <span class="soft">🧠</span>
-          <p>Pensamiento lógico</p>
-          <span class="soft">📅</span>
-          <p>Planificación y organización</p>
-          <span class="soft">🤜🤛</span>
-          <p>Trabajo en equipo</p>
-          <span class="soft">🎯</span>
-          <p>Tenacidad</p>
+      <div class="skill-group">
+        <h4>Backend</h4>
+        <div class="pills">
+          <span class="pill">Node.js</span>
+          <span class="pill">NestJS</span>
+          <span class="pill">GraphQL</span>
+          <span class="pill">Prisma</span>
+          <span class="pill">PostgreSQL</span>
+          <span class="pill">MongoDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Cloud &amp; Infraestructura</h4>
+        <div class="pills">
+          <span class="pill">AWS Serverless</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Data &amp; BI</h4>
+        <div class="pills">
+          <span class="pill">DBT</span>
+          <span class="pill">Metabase</span>
+          <span class="pill">Starburst</span>
+          <span class="pill">Fivetran</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Auth &amp; Payments</h4>
+        <div class="pills">
+          <span class="pill">Stripe</span>
+          <span class="pill">Auth0</span>
+          <span class="pill">Clerk</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h4>Herramientas</h4>
+        <div class="pills">
+          <span class="pill">Git</span>
+          <span class="pill">Postman</span>
+          <span class="pill">Linear</span>
+          <span class="pill">Miro</span>
+          <span class="pill">OpenAI</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PROJECTS SECTION -->
   <section id="projects">
-    <h3 class="title-section">MIS PROYECTOS</h3>
+    <h3 class="title-section">Mis proyectos</h3>
     <div class="row">
       <div class="project">
-        <div class="overlay"></div>
-          <img src="./img/LandingPI.png" alt="Proyecto: Countries!">
+        <img src="./img/LandingPI.png" alt="Proyecto: Countries!">
         <div class="info">
           <h4>Countries!</h4>
-          <P>Hecha con:<br>HTML, CSS, Typescript, React, API "REST countries"
-            <br>
-            <div class="links">
-              <a href="https://countries-no-db.onrender.com/" target="_blank">Deploy</a>
-              <p>||</p>
-              <a href="https://github.com/Azrux/countries-no-db" target="_blank">Repositorio</a></P>
-            </div>
+          <p>Hecha con: HTML, CSS, TypeScript, React, API "REST Countries"</p>
+          <div class="links">
+            <a href="https://countries-no-db.onrender.com/" target="_blank">Deploy</a>
+            <p>||</p>
+            <a href="https://github.com/Azrux/countries-no-db" target="_blank">Repositorio</a>
+          </div>
         </div>
       </div>
-      <div class="project">
-        <div class="overlay"></div>
-        <img src="./img/LandingPF.png" alt="Proyecto: Club Athenas">
+      <div class="project project--contain">
+        <img src="./img/SpotifyLyricsPiP.png" alt="Proyecto: Spotify Lyrics PiP">
         <div class="info">
-          <h4>Club Athenas</h4>
-          <P>Es una App Full Stack hecha en grupo. Utilizamos:<br>HTML, Bootstrap, Javascript, React, Redux, Node.Js, Express.Js, PostgreSQL, Sequelize, Auth0, pasarela de pagos "Mercado Pago"
-            <br>
-            <div class="links">
-              <a href="https://github.com/MATarg81/proyecto-final" target="_blank">Repositorio</a></P>
-            </div></P>
-        </div>
-      </div>
-      <div class="project">
-        <div class="overlay"></div>
-        <img src="./img/Tasks.png" alt="Proyecto: Tasks">
-        <div class="info">
-          <h4>Tasks</h4>
-          <P>Es una App sencilla, solo front. Utilicé:<br>TypeScript, React y Bootstrap
-            <br>
-            <div class="links">
-              <a href="https://tasks-h6x1.onrender.com/" target="_blank">Deploy</a>
-              <p>||</p>
-              <a href="https://github.com/Azrux/Tasks" target="_blank">Repositorio</a></P>
-            </div></P>
-        </div>
-      </div>
-      <div class="project">
-        <div class="overlay"></div>
-        <img src="./img/Calculadora.png" alt="Proyecto: Calculadora">
-        <div class="info">
-          <h4>Calculadora</h4>
-          <P>App simple. Hecha con:<br>React, TypeScript, Material UI.
-            <br>
-            <div class="links">
-              <a href="https://calculator-ctfa.onrender.com/" target="_blank">Deploy</a>
-              <p>||</p>
-              <a href="https://github.com/Azrux/calculator" target="_blank">Repositorio</a></P>
-            </div></P>
+          <h4>Spotify Lyrics PiP</h4>
+          <p>App de escritorio (Electron) con una ventana flotante, siempre visible, que muestra las letras
+            sincronizadas de lo que suena en tu cuenta de Spotify. Login con OAuth PKCE, letras vía lrclib.net,
+            instalador para Windows con release automatizado por GitHub Actions. Hecha con: Electron, Node.js,
+            OAuth PKCE, GitHub Actions</p>
+          <div class="links">
+            <a href="https://github.com/Azrux/spotify-lyrics-pip/releases" target="_blank">Releases</a>
+            <p>||</p>
+            <a href="https://github.com/Azrux/spotify-lyrics-pip" target="_blank">Repositorio</a>
+          </div>
         </div>
       </div>
     </div>
@@ -229,8 +290,9 @@
 
   <!-- FOOTER SECTION -->
   <footer>
-    <P>Con <span>♥</span> Lau - 2023</P>
+    <p>Con <span>♥</span> Lau - 2026</p>
     <div class="social">
+      <a href='mailto:lausofimarce@gmail.com'><i class="fa-solid fa-envelope"></i></a>
       <a href='https://www.linkedin.com/in/laura-marcenaro/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       <a href='https://github.com/Azrux' target="_blank"><i class="fa-brands fa-square-github"></i></a>
     </div>
