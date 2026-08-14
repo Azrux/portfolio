@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Laura Marcenaro — Software Engineer Full Stack JavaScript/TypeScript. React, Node.js, GraphQL. Buenos Aires, Argentina.">
+    <script>
+      // Applied before first paint to avoid a flash of the wrong theme/language.
+      (function () {
+        var theme = localStorage.getItem('theme') ||
+          (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+
+        var lang = localStorage.getItem('lang') ||
+          (navigator.language && navigator.language.toLowerCase().startsWith('es') ? 'es' : 'en');
+        document.documentElement.setAttribute('lang', lang);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,12 +36,12 @@
           <a href="#home" class="logo">Laura Marcenaro</a>
           <nav id="nav" class="">
             <ul id="links">
-              <li><a href='#home' class="selected" onclick="selected(this)">INICIO</a></li>
-              <li><a href='#about' onclick="selected(this)">SOBRE MÍ</a></li>
-              <li><a href='#experience' onclick="selected(this)">EXPERIENCIA</a></li>
-              <li><a href='#skills' onclick="selected(this)">HABILIDADES</a></li>
-              <li><a href='#projects' onclick="selected(this)">PROYECTOS</a></li>
-              <li><a href='#contact' onclick="selected(this)">CONTACTO</a></li>
+              <li><a href='#home' class="selected" onclick="selected(this)" data-i18n="nav.home">INICIO</a></li>
+              <li><a href='#about' onclick="selected(this)" data-i18n="nav.about">SOBRE MÍ</a></li>
+              <li><a href='#experience' onclick="selected(this)" data-i18n="nav.experience">EXPERIENCIA</a></li>
+              <li><a href='#skills' onclick="selected(this)" data-i18n="nav.skills">HABILIDADES</a></li>
+              <li><a href='#projects' onclick="selected(this)" data-i18n="nav.projects">PROYECTOS</a></li>
+              <li><a href='#contact' onclick="selected(this)" data-i18n="nav.contact">CONTACTO</a></li>
             </ul>
           </nav>
 
@@ -44,18 +56,26 @@
               <a href='https://github.com/Azrux' target="_blank"><i class="fa-brands fa-square-github"></i></a>
             </div>
 
+          <!-- THEME + LANGUAGE TOGGLES -->
+          <div class="header-controls">
+            <button id="theme-toggle" class="icon-toggle" aria-label="Cambiar tema" title="Cambiar tema">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+            <button id="lang-toggle" class="icon-toggle lang-toggle" aria-label="Switch language" title="Switch language">EN</button>
+          </div>
+
         </div>
       </header>
       <div class="introduction">
-        <p class="welcome">Software Engineer</p>
+        <p class="welcome" data-i18n="hero.eyebrow">Software Engineer</p>
         <h1>Laura <span>Marcenaro</span></h1>
-        <p class="description">
+        <p class="description" data-i18n="hero.description">
           Full Stack JavaScript/TypeScript. Más de 3 años construyendo y manteniendo productos SaaS
           para startups de Estados Unidos — React, Node.js y arquitecturas GraphQL, desde Buenos Aires, Argentina.
         </p>
         <div class="hero-cta">
-          <a href="#projects" class="btn-primary">Ver proyectos</a>
-          <a href="assets/Laura-Marcenaro-CV.pdf" target="_blank" class="btn-secondary">Descargar CV</a>
+          <a href="#projects" class="btn-primary" data-i18n="hero.ctaProjects">Ver proyectos</a>
+          <a href="assets/Laura-Marcenaro-CV-ES.pdf" target="_blank" class="btn-secondary" data-cv-link data-i18n="hero.ctaCV">Descargar CV</a>
         </div>
       </div>
     </div>
@@ -67,10 +87,10 @@
       <img src="./img/perfil linkedin.jpg" alt="Foto de perfil de Laura Marcenaro">
     </div>
     <div class="about">
-      <p class="title-section">Sobre mí</p>
-      <h2>Hola, soy <span>Laura Marcenaro</span></h2>
+      <p class="title-section" data-i18n="about.title">Sobre mí</p>
+      <h2 data-i18n-html="about.greeting">Hola, soy <span>Laura Marcenaro</span></h2>
       <h3>Software Engineer — Full Stack JavaScript/TypeScript</h3>
-      <p>
+      <p data-i18n-html="about.body">
         Tengo más de 3 años de experiencia construyendo y manteniendo productos SaaS para startups de Estados
         Unidos, especializada en el ecosistema JavaScript/TypeScript: React, Node.js y arquitecturas GraphQL.
         Trabajé en migraciones de sistemas, plataformas de suscripción e integraciones de datos/BI, siempre en
@@ -89,27 +109,27 @@
         <b>lausofimarce@gmail.com</b>, o dejame un mensaje en la sección
         <a href="#contact" class="contactMe">CONTACTO</a> de este mismo sitio.
       </p>
-      <a href="assets/Laura-Marcenaro-CV.pdf" target="_blank" class="download">Descargar CV</a>
+      <a href="assets/Laura-Marcenaro-CV-ES.pdf" target="_blank" class="download" data-cv-link data-i18n="about.downloadCV">Descargar CV</a>
     </div>
   </section>
 
   <!-- EXPERIENCE SECTION -->
   <section id="experience">
-    <h3 class="title-section">Experiencia</h3>
+    <h3 class="title-section" data-i18n="experience.title">Experiencia</h3>
     <div class="timeline">
       <div class="timeline-item">
         <div class="timeline-marker"></div>
         <div class="timeline-content">
           <div class="timeline-head">
             <h4>Software Engineer</h4>
-            <span class="timeline-date">Mar 2026 — Presente</span>
+            <span class="timeline-date" data-i18n="exp.0.dates">Mar 2026 — Presente</span>
           </div>
-          <p class="timeline-company">Embeddables · EE.UU. (Remoto)</p>
+          <p class="timeline-company" data-i18n="exp.0.company">Embeddables · EE.UU. (Remoto)</p>
           <ul>
-            <li>Lidero el desarrollo de herramientas y procesos internos para mejorar la productividad del equipo de ingeniería.</li>
-            <li>Construyo y mantengo funcionalidades en toda la plataforma, dando soporte a su estabilidad y escalabilidad.</li>
-            <li>Trabajo junto a producto y equipos de cliente para entregar soluciones escalables a clientes de salud en EE.UU.</li>
-            <li>Integro plataformas EHR/EMR en soluciones web para clientes.</li>
+            <li data-i18n="exp.0.b0">Lidero el desarrollo de herramientas y procesos internos para mejorar la productividad del equipo de ingeniería.</li>
+            <li data-i18n="exp.0.b1">Construyo y mantengo funcionalidades en toda la plataforma, dando soporte a su estabilidad y escalabilidad.</li>
+            <li data-i18n="exp.0.b2">Trabajo junto a producto y equipos de cliente para entregar soluciones escalables a clientes de salud en EE.UU.</li>
+            <li data-i18n="exp.0.b3">Integro plataformas EHR/EMR en soluciones web para clientes.</li>
           </ul>
         </div>
       </div>
@@ -121,11 +141,11 @@
             <h4>Frontend Engineer</h4>
             <span class="timeline-date">Mar 2025 — Mar 2026</span>
           </div>
-          <p class="timeline-company">Embeddables · EE.UU. (Remoto)</p>
+          <p class="timeline-company" data-i18n="exp.1.company">Embeddables · EE.UU. (Remoto)</p>
           <ul>
-            <li>Implementé soluciones web a medida para clientes usando JavaScript y CSS sobre la plataforma low-code de la empresa.</li>
-            <li>Construí y personalicé componentes de UI avanzados para requerimientos no estándar.</li>
-            <li>Asistí al equipo en integraciones de API y resolución de problemas técnicos complejos.</li>
+            <li data-i18n="exp.1.b0">Implementé soluciones web a medida para clientes usando JavaScript y CSS sobre la plataforma low-code de la empresa.</li>
+            <li data-i18n="exp.1.b1">Construí y personalicé componentes de UI avanzados para requerimientos no estándar.</li>
+            <li data-i18n="exp.1.b2">Asistí al equipo en integraciones de API y resolución de problemas técnicos complejos.</li>
           </ul>
         </div>
       </div>
@@ -137,14 +157,14 @@
             <h4>Full Stack Software Engineer</h4>
             <span class="timeline-date">Mar 2023 — Feb 2025</span>
           </div>
-          <p class="timeline-company">Trades.org · EE.UU. (Remoto)</p>
+          <p class="timeline-company" data-i18n="exp.2.company">Trades.org · EE.UU. (Remoto)</p>
           <ul>
-            <li>Desarrollé funcionalidades frontend y backend para plataformas SaaS con React, Node.js, GraphQL y PostgreSQL.</li>
-            <li>Armé una librería de componentes reutilizable con Storybook para estandarizar la UI entre proyectos.</li>
-            <li>Migré el sitio de la empresa de JavaScript a TypeScript.</li>
-            <li>Lideré la migración de PostgreSQL a MongoDB y aporté a una arquitectura de microservicios con Apollo Federation.</li>
-            <li>Diseñé e implementé un sistema de suscripciones y facturación con Stripe.</li>
-            <li>Lideré una iniciativa de Business Intelligence con DBT, Metabase, Starburst y Fivetran.</li>
+            <li data-i18n="exp.2.b0">Desarrollé funcionalidades frontend y backend para plataformas SaaS con React, Node.js, GraphQL y PostgreSQL.</li>
+            <li data-i18n="exp.2.b1">Armé una librería de componentes reutilizable con Storybook para estandarizar la UI entre proyectos.</li>
+            <li data-i18n="exp.2.b2">Migré el sitio de la empresa de JavaScript a TypeScript.</li>
+            <li data-i18n="exp.2.b3">Lideré la migración de PostgreSQL a MongoDB y aporté a una arquitectura de microservicios con Apollo Federation.</li>
+            <li data-i18n="exp.2.b4">Diseñé e implementé un sistema de suscripciones y facturación con Stripe.</li>
+            <li data-i18n="exp.2.b5">Lideré una iniciativa de Business Intelligence con DBT, Metabase, Starburst y Fivetran.</li>
           </ul>
         </div>
       </div>
@@ -156,11 +176,11 @@
             <h4>Full Stack Teaching Assistant</h4>
             <span class="timeline-date">Sep 2022 — May 2023</span>
           </div>
-          <p class="timeline-company">SoyHenry Bootcamp · Buenos Aires, Argentina</p>
+          <p class="timeline-company" data-i18n="exp.3.company">SoyHenry Bootcamp · Buenos Aires, Argentina</p>
           <ul>
-            <li>Mentoreé estudiantes durante el programa de Desarrollo Web Full Stack.</li>
-            <li>Ayudé con debugging, decisiones de arquitectura y ejercicios de código.</li>
-            <li>Facilité el aprendizaje colaborativo con pair programming.</li>
+            <li data-i18n="exp.3.b0">Mentoreé estudiantes durante el programa de Desarrollo Web Full Stack.</li>
+            <li data-i18n="exp.3.b1">Ayudé con debugging, decisiones de arquitectura y ejercicios de código.</li>
+            <li data-i18n="exp.3.b2">Facilité el aprendizaje colaborativo con pair programming.</li>
           </ul>
         </div>
       </div>
@@ -169,7 +189,7 @@
 
   <!-- SKILLS SECTION -->
   <section id="skills">
-    <h3 class="title-section">Habilidades</h3>
+    <h3 class="title-section" data-i18n="skills.title">Habilidades</h3>
     <div class="skills-grid">
       <div class="skill-group">
         <h4>Frontend</h4>
@@ -193,7 +213,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <h4>Cloud &amp; Infraestructura</h4>
+        <h4 data-i18n="skills.cloud">Cloud &amp; Infraestructura</h4>
         <div class="pills">
           <span class="pill">AWS Serverless</span>
         </div>
@@ -216,7 +236,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <h4>Herramientas</h4>
+        <h4 data-i18n="skills.tools">Herramientas</h4>
         <div class="pills">
           <span class="pill">Git</span>
           <span class="pill">Postman</span>
@@ -230,17 +250,17 @@
 
   <!-- PROJECTS SECTION -->
   <section id="projects">
-    <h3 class="title-section">Mis proyectos</h3>
+    <h3 class="title-section" data-i18n="projects.title">Mis proyectos</h3>
     <div class="row">
       <div class="project">
         <img src="./img/LandingPI.png" alt="Proyecto: Countries!">
         <div class="info">
           <h4>Countries!</h4>
-          <p>Hecha con: HTML, CSS, TypeScript, React, API "REST Countries"</p>
+          <p data-i18n="projects.countries.desc">Hecha con: HTML, CSS, TypeScript, React, API "REST Countries"</p>
           <div class="links">
             <a href="https://countries-no-db.onrender.com/" target="_blank">Deploy</a>
             <p>||</p>
-            <a href="https://github.com/Azrux/countries-no-db" target="_blank">Repositorio</a>
+            <a href="https://github.com/Azrux/countries-no-db" target="_blank" data-i18n="projects.repo">Repositorio</a>
           </div>
         </div>
       </div>
@@ -249,14 +269,14 @@
         <button class="unmute-btn" id="unmute-btn" aria-label="Activar sonido" title="Activar sonido">🔇</button>
         <div class="info">
           <h4>Spotify Lyrics PiP</h4>
-          <p>App de escritorio (Electron) con una ventana flotante, siempre visible, que muestra las letras
+          <p data-i18n="projects.spotify.desc">App de escritorio (Electron) con una ventana flotante, siempre visible, que muestra las letras
             sincronizadas de lo que suena en tu cuenta de Spotify. Login con OAuth PKCE, letras vía lrclib.net,
             instalador para Windows con release automatizado por GitHub Actions. Hecha con: Electron, Node.js,
             OAuth PKCE, GitHub Actions</p>
           <div class="links">
             <a href="https://github.com/Azrux/spotify-lyrics-pip/releases" target="_blank">Releases</a>
             <p>||</p>
-            <a href="https://github.com/Azrux/spotify-lyrics-pip" target="_blank">Repositorio</a>
+            <a href="https://github.com/Azrux/spotify-lyrics-pip" target="_blank" data-i18n="projects.repo">Repositorio</a>
           </div>
         </div>
       </div>
@@ -265,25 +285,25 @@
 
   <!-- CONTACT SECTION -->
   <section id="contact">
-    <h3 class="title-section">Contactame</h3>
+    <h3 class="title-section" data-i18n="contact.title">Contactame</h3>
     <div class="form-container">
       <form action="https://formsubmit.co/b3adf27f4e6e2ea0b212981129154ad4" method="POST">
         <div class="half row">
-          <input type="text" placeholder="Nombre..." class="half-input" name="name" required>
-          <input type="email" placeholder="Email..." class="half-input" name="email" required>
+          <input type="text" placeholder="Nombre..." class="half-input" name="name" data-i18n-placeholder="contact.name" required>
+          <input type="email" placeholder="Email..." class="half-input" name="email" data-i18n-placeholder="contact.email" required>
         </div>
         <div class="row">
-          <input type="text" placeholder="Asunto..." class="full-input" name="asunto" required>
+          <input type="text" placeholder="Asunto..." class="full-input" name="asunto" data-i18n-placeholder="contact.subject" required>
         </div>
         <div class="row">
-          <textarea name="msg" id="" cols="" rows="" placeholder="Escribe el mensaje aquí..." class="full-input" required></textarea>
+          <textarea name="msg" id="" cols="" rows="" placeholder="Escribe el mensaje aquí..." class="full-input" data-i18n-placeholder="contact.message" required></textarea>
         </div>
 
-        <input type="submit" value='Enviar' class="send-btn">
+        <input type="submit" value='Enviar' class="send-btn" data-i18n-value="contact.send">
 
         <!-- MESSAGE OPTIONS -->
         <input type="hidden" name="_next" value="https://portfolio-kype.onrender.com/">
-        <input type="hidden" name="_autoresponse" value="Gracias por dejar tu mensaje. Lo voy a estar leyendo a la brevedad ☺">
+        <input type="hidden" name="_autoresponse" value="Gracias por dejar tu mensaje. Lo voy a estar leyendo a la brevedad ☺" data-i18n-value="contact.autoresponse">
         <input type="hidden" name="_template" value="box">
       </form>
     </div>
@@ -291,7 +311,7 @@
 
   <!-- FOOTER SECTION -->
   <footer>
-    <p>Con <span>♥</span> Lau - 2026</p>
+    <p data-i18n-html="footer.text">Con <span>♥</span> Lau - 2026</p>
     <div class="social">
       <a href='mailto:lausofimarce@gmail.com'><i class="fa-solid fa-envelope"></i></a>
       <a href='https://www.linkedin.com/in/laura-marcenaro/' target="_blank"><i class="fa-brands fa-linkedin"></i></a>
