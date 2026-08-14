@@ -24,13 +24,26 @@ function responsiveMenu() {
   if (!btn) return;
   const icon = btn.querySelector('i');
 
+  const tooltips = {
+    es: { toDark: 'Cambiar a modo oscuro', toLight: 'Cambiar a modo claro' },
+    en: { toDark: 'Switch to dark mode', toLight: 'Switch to light mode' },
+  };
+
+  function updateTooltip() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'light';
+    const lang = document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'es';
+    const label = theme === 'light' ? tooltips[lang].toDark : tooltips[lang].toLight;
+    btn.title = label;
+    btn.setAttribute('aria-label', label);
+  }
+
   function apply(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     if (icon) {
       icon.classList.toggle('fa-moon', theme === 'light');
       icon.classList.toggle('fa-sun', theme === 'dark');
     }
-    btn.title = theme === 'light' ? 'Modo oscuro' : 'Modo claro';
+    updateTooltip();
   }
 
   apply(document.documentElement.getAttribute('data-theme') || 'light');
@@ -40,6 +53,9 @@ function responsiveMenu() {
     localStorage.setItem('theme', next);
     apply(next);
   });
+
+  // Re-label when the language changes too, since the tooltip text depends on it.
+  window.__updateThemeTooltip = updateTooltip;
 })();
 
 // Spanish/English translation
@@ -223,7 +239,12 @@ function responsiveMenu() {
     });
 
     langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
-    langBtn.title = lang === 'es' ? 'Switch to English' : 'Cambiar a español';
+    const langLabel = lang === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish';
+    langBtn.title = langLabel;
+    langBtn.setAttribute('aria-label', langLabel);
+
+    // The theme button's tooltip is phrased in the active language too.
+    if (window.__updateThemeTooltip) window.__updateThemeTooltip();
   }
 
   apply(document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'es');
