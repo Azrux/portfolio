@@ -18,6 +18,20 @@ function responsiveMenu() {
   }
 }
 
+// Demo video: starts muted/looping, lets the visitor opt into audio.
+(function initDemoVideo() {
+  const video = document.querySelector('.demo-video');
+  const unmuteBtn = document.getElementById('unmute-btn');
+  if (!video || !unmuteBtn) return;
+
+  unmuteBtn.addEventListener('click', () => {
+    video.muted = !video.muted;
+    unmuteBtn.textContent = video.muted ? '🔇' : '🔊';
+    unmuteBtn.title = video.muted ? 'Activar sonido' : 'Silenciar';
+    unmuteBtn.setAttribute('aria-label', unmuteBtn.title);
+  });
+})();
+
 // Interactive particle/constellation background for the hero section.
 (function initHeroCanvas() {
   const canvas = document.getElementById('hero-canvas');
