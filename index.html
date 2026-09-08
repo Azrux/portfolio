@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
     <title>Laura Marcenaro — Software Engineer</title>
-    <link rel="icon" type="image/x-icon" href="img/code-solid.svg">
+    <link rel="icon" type="image/x-icon" href="assets/code-solid.svg">
 </head>
 <body>
 
@@ -84,7 +84,7 @@
   <!-- ABOUT ME SECTION -->
   <section id="about">
     <div class="photo-container">
-      <img src="./img/perfil linkedin.jpg" alt="Foto de perfil de Laura Marcenaro">
+      <img src="./assets/perfil linkedin.jpg" alt="Foto de perfil de Laura Marcenaro">
     </div>
     <div class="about">
       <p class="title-section" data-i18n="about.title">Sobre mí</p>
@@ -253,7 +253,7 @@
     <h3 class="title-section" data-i18n="projects.title">Mis proyectos</h3>
     <div class="row">
       <div class="project">
-        <img src="./img/LandingPI.png" alt="Proyecto: Countries!">
+        <img src="./assets/LandingPI.png" alt="Proyecto: Countries!">
         <div class="info">
           <h4>Countries!</h4>
           <p data-i18n="projects.countries.desc">Hecha con: HTML, CSS, TypeScript, React, API "REST Countries"</p>
@@ -265,8 +265,9 @@
         </div>
       </div>
       <div class="project project--contain project--video">
-        <video class="demo-video" src="./img/spotify-lyrics-demo.mp4" autoplay muted loop playsinline></video>
-        <button class="unmute-btn" id="unmute-btn" aria-label="Activar sonido" title="Activar sonido">🔇</button>
+        <video class="demo-video" src="./assets/spotify-lyrics-demo.mp4" autoplay muted loop playsinline></video>
+        <button class="unmute-btn" aria-label="Activar sonido" title="Activar sonido">🔇</button>
+        <button class="fs-btn" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
         <div class="info">
           <h4>Spotify Lyrics PiP</h4>
           <p data-i18n="projects.spotify.desc">App de escritorio (Electron) con una ventana flotante, siempre visible, que muestra las letras
@@ -277,6 +278,23 @@
             <a href="https://github.com/Azrux/spotify-lyrics-pip/releases" target="_blank">Releases</a>
             <p>||</p>
             <a href="https://github.com/Azrux/spotify-lyrics-pip" target="_blank" data-i18n="projects.repo">Repositorio</a>
+          </div>
+        </div>
+      </div>
+      <div class="project project--contain project--video">
+        <video class="demo-video" src="./assets/poke_quiz.mp4" autoplay muted loop playsinline></video>
+        <button class="fs-btn" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+        <div class="info">
+          <h4>Pokémon Quiz</h4>
+          <p data-i18n="projects.pokequiz.desc">Juego web "¿Quién es ese Pokémon?": adiviná la mayor cantidad posible escribiendo sus nombres,
+            solo, en co-op o versus en tiempo real. Multiplataforma y sin instalar: corre en el navegador de la PC
+            o del celu, y tu cuenta, historial de partidas y leaderboard se sincronizan entre dispositivos.
+            Login con usuario/contraseña (argon2id) o Google; datos y sprites de PokeAPI. Hecho con: React,
+            TypeScript, Zustand, Node.js, Express, Socket.IO, PostgreSQL</p>
+          <div class="links">
+            <a href="https://pokemon-quiz.lausofimarce.workers.dev/" target="_blank">Deploy</a>
+            <p>||</p>
+            <a href="https://github.com/Azrux/pokemon-quiz" target="_blank" data-i18n="projects.repo">Repositorio</a>
           </div>
         </div>
       </div>

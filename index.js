@@ -125,6 +125,11 @@ function responsiveMenu() {
             sincronizadas de lo que suena en tu cuenta de Spotify. Login con OAuth PKCE, letras vía lrclib.net,
             instalador para Windows con release automatizado por GitHub Actions. Hecha con: Electron, Node.js,
             OAuth PKCE, GitHub Actions`,
+      'projects.pokequiz.desc': `Juego web "¿Quién es ese Pokémon?": adiviná la mayor cantidad posible escribiendo sus nombres,
+            solo, en co-op o versus en tiempo real. Multiplataforma y sin instalar: corre en el navegador de la PC
+            o del celu, y tu cuenta, historial de partidas y leaderboard se sincronizan entre dispositivos.
+            Login con usuario/contraseña (argon2id) o Google; datos y sprites de PokeAPI. Hecho con: React,
+            TypeScript, Zustand, Node.js, Express, Socket.IO, PostgreSQL`,
       'projects.repo': 'Repositorio',
       'contact.title': 'Contactame',
       'contact.name': 'Nombre...',
@@ -198,6 +203,11 @@ function responsiveMenu() {
             lyrics for whatever's playing on your Spotify account. OAuth PKCE login, lyrics via lrclib.net,
             Windows installer with automated releases via GitHub Actions. Built with: Electron, Node.js,
             OAuth PKCE, GitHub Actions`,
+      'projects.pokequiz.desc': `"Who's that Pokémon?" web game: name as many as you can by typing them —
+            solo, co-op, or versus in real time. Cross-platform and install-free: it runs in the browser on
+            desktop or phone, and your account, match history, and leaderboard sync across devices.
+            Sign in with username/password (argon2id) or Google; data and sprites from PokeAPI. Built with: React,
+            TypeScript, Zustand, Node.js, Express, Socket.IO, PostgreSQL`,
       'projects.repo': 'Repository',
       'contact.title': 'Get in touch',
       'contact.name': 'Name...',
@@ -258,16 +268,56 @@ function responsiveMenu() {
 })();
 
 // Demo video: starts muted/looping, lets the visitor opt into audio.
-(function initDemoVideo() {
-  const video = document.querySelector('.demo-video');
-  const unmuteBtn = document.getElementById('unmute-btn');
-  if (!video || !unmuteBtn) return;
+(function initDemoVideos() {
+  const videos = document.querySelectorAll('.project--video');
 
-  unmuteBtn.addEventListener('click', () => {
-    video.muted = !video.muted;
-    unmuteBtn.textContent = video.muted ? '🔇' : '🔊';
-    unmuteBtn.title = video.muted ? 'Activar sonido' : 'Silenciar';
-    unmuteBtn.setAttribute('aria-label', unmuteBtn.title);
+  videos.forEach((container) => {
+    const video = container.querySelector('.demo-video');
+    const unmuteBtn = container.querySelector('.unmute-btn');
+    if (!video || !unmuteBtn) return;
+
+    unmuteBtn.addEventListener('click', () => {
+      // Mute every other demo video so only one plays audio at a time.
+      videos.forEach((other) => {
+        if (other !== container) {
+          const v = other.querySelector('.demo-video');
+          const b = other.querySelector('.unmute-btn');
+          if (v && !v.muted) {
+            v.muted = true;
+            if (b) {
+              b.textContent = '🔇';
+              b.title = 'Activar sonido';
+              b.setAttribute('aria-label', b.title);
+            }
+          }
+        }
+      });
+
+      video.muted = !video.muted;
+      unmuteBtn.textContent = video.muted ? '🔇' : '🔊';
+      unmuteBtn.title = video.muted ? 'Activar sonido' : 'Silenciar';
+      unmuteBtn.setAttribute('aria-label', unmuteBtn.title);
+    });
+  });
+})();
+
+// Demo video: let the visitor blow it up to fullscreen.
+(function initFullscreenVideos() {
+  document.querySelectorAll('.project--video').forEach((container) => {
+    const video = container.querySelector('.demo-video');
+    const fsBtn = container.querySelector('.fs-btn');
+    if (!video || !fsBtn) return;
+
+    fsBtn.addEventListener('click', () => {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      } else if (container.requestFullscreen) {
+        container.requestFullscreen();
+      } else if (video.webkitEnterFullscreen) {
+        // iOS Safari only exposes fullscreen on the <video> itself.
+        video.webkitEnterFullscreen();
+      }
+    });
   });
 })();
 
