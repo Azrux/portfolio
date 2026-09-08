@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Laura Sofía Marcenaro — CV</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 20pt;
+    margin: 0 0 2pt;
+  }
+  .subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    margin: 0 0 10pt;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    margin: 0 4pt;
+  }
+  .links {
+    text-align: center;
+    margin: 2pt 0 12pt;
+  }
+  .links a { color: #1155cc; text-decoration: underline; margin: 0 4pt; }
+  .summary { text-align: justify; margin: 0 0 14pt; }
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin: 14pt 0 6pt;
+  }
+  .skills p { margin: 0 0 2pt; }
+  .job { margin: 0 0 10pt; }
+  .job-title { font-weight: bold; margin: 0 0 3pt; }
+  ul { margin: 0; padding-left: 18pt; }
+  li { margin: 0 0 2pt; }
+  .edu p { margin: 0; }
+  .tight { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+  <h1>Laura Sofía Marcenaro</h1>
+  <div class="subtitle">Software Engineer | Full Stack JavaScript/TypeScript</div>
+
+  <div class="contact">
+    <span>lausofimarce@gmail.com</span>
+    <span>Buenos Aires - Argentina.</span>
+  </div>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/laura-marcenaro/">LinkedIn</a>
+    <a href="https://github.com/Azrux">Github</a>
+  </div>
+
+  <p class="summary">
+    Software Engineer with 3+ years of experience building and maintaining SaaS products for U.S.-based startups.
+    Specialized in the JavaScript/TypeScript ecosystem, working across React, Node.js, and GraphQL architectures.
+    Currently focused on AI-assisted development: building my team's agent tooling &mdash; custom skills, review and
+    deploy agents, and MCP integrations &mdash; and debugging LLM-driven product features. Experienced in product
+    development, system migrations, subscription platforms, and data/BI integrations. Known for strong ownership,
+    problem-solving skills, and effective collaboration in remote teams.
+  </p>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <p><b>Frontend:</b> React, Next.js, TypeScript, Redux, TailwindCSS</p>
+    <p><b>Backend:</b> Node.js, NestJS, GraphQL, Prisma, PostgreSQL, MongoDB</p>
+    <p><b>AI / GenAI:</b> LLM agents (Cursor, Claude), MCP integration, agent skill design, prompt engineering, AI-assisted code review &amp; evaluation, OpenAI API</p>
+    <p><b>Cloud &amp; Infrastructure:</b> AWS Serverless</p>
+    <p><b>Data &amp; BI:</b> DBT, Metabase, Starburst, Fivetran</p>
+    <p><b>Auth &amp; Payments:</b> Stripe, Auth0, Clerk</p>
+    <p><b>Tools:</b> Git, Postman, Linear, Miro</p>
+  </div>
+
+  <h2>Professional Experience</h2>
+
+  <div class="job">
+    <p class="job-title">Software Engineer (Mar 2026 - Present) - Embeddables, USA (Remote)</p>
+    <ul>
+      <li>Lead the team's AI-assisted development platform: authored reusable agent skills and custom agents
+        (PR review, production deploy, change tracing) for Cursor/Claude, integrated via MCP with GitHub and Linear.</li>
+      <li>Built a tracing-based workflow to debug the production LLM assistant, correlating execution traces,
+        tool selection, and parameters to root-cause incorrect responses.</li>
+      <li>Build and maintain features and fixes across the platform while supporting ongoing product stability and scalability.</li>
+      <li>Work cross-functionally with product and customer-facing teams to deliver scalable solutions for U.S.-based healthcare clients.</li>
+      <li>Collaborate closely with EHR/EMR platforms to integrate healthcare systems into client-facing web solutions.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <p class="job-title">Frontend Engineer (Mar 2025 - Mar 2026) - Embeddables, USA (Remote)</p>
+    <ul>
+      <li>Worked directly with clients to implement custom web solutions using JavaScript and CSS through the company's low-code platform.</li>
+      <li>Built and customized advanced UI components to meet non-standard client requirements.</li>
+      <li>Assisted teammates with complex implementations including API integrations and technical troubleshooting.</li>
+      <li>Collaborated across teams to deliver scalable and maintainable solutions for client projects.</li>
+      <li>Integrated EHR/EMR systems into client-facing healthcare solutions.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <p class="job-title">Full Stack Software Engineer (Mar 2023 - Feb 2025) - Trades.org, USA (Remote).</p>
+    <ul>
+      <li>Developed frontend and backend features for SaaS platforms using React, Node.js, GraphQL, and PostgreSQL.</li>
+      <li>Built a reusable component library with Storybook to standardize UI development across projects.</li>
+      <li>Migrated the company website from JavaScript to TypeScript, improving maintainability and developer experience.</li>
+      <li>Led backend migration efforts from PostgreSQL to MongoDB and contributed to a microservices architecture using Apollo Federation.</li>
+      <li>Designed and implemented a subscription and billing system using Stripe.</li>
+      <li>Migrated the authentication system from Auth0 to Clerk.</li>
+      <li>Planned and led a Business Intelligence initiative with the Marketing team using DBT, Metabase, Starburst, and Fivetran.</li>
+    </ul>
+  </div>
+
+  <div class="job tight">
+    <p class="job-title">Full Stack Teaching Assistant (Sep 2022 - May 2023) - SoyHenry Bootcamp, Buenos Aires, Argentina.</p>
+    <ul>
+      <li>Mentored students during the Full Stack Web Development program.</li>
+      <li>Assisted with debugging, architecture decisions, and coding exercises.</li>
+      <li>Facilitated collaborative learning through pair programming and group problem-solving.</li>
+      <li>Proposed improvements to internal bootcamp processes.</li>
+    </ul>
+  </div>
+
+  <div class="tight">
+    <h2>Professional Education</h2>
+    <div class="edu">
+      <p><b>Henry Bootcamp — Full Stack Web Development</b></p>
+      <p>2022</p>
+    </div>
+
+    <h2>Languages</h2>
+    <ul>
+      <li>English - Professional Working Proficiency</li>
+      <li>Spanish - Native</li>
+    </ul>
+  </div>
+
+</body>
+</html>

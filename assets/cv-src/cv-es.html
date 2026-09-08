@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Laura Sofía Marcenaro — CV</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    color: #1a1a1a;
+    margin: 0;
+  }
+  h1 {
+    text-align: center;
+    font-size: 20pt;
+    margin: 0 0 2pt;
+  }
+  .subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    margin: 0 0 10pt;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10pt;
+    margin: 0 4pt;
+  }
+  .links {
+    text-align: center;
+    margin: 2pt 0 12pt;
+  }
+  .links a { color: #1155cc; text-decoration: underline; margin: 0 4pt; }
+  .summary { text-align: justify; margin: 0 0 14pt; }
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.3pt;
+    margin: 14pt 0 6pt;
+  }
+  .skills p { margin: 0 0 2pt; }
+  .job { margin: 0 0 10pt; }
+  .job-title { font-weight: bold; margin: 0 0 3pt; }
+  ul { margin: 0; padding-left: 18pt; }
+  li { margin: 0 0 2pt; }
+  .edu p { margin: 0; }
+  .tight { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+  <h1>Laura Sofía Marcenaro</h1>
+  <div class="subtitle">Ingeniera de Software | Full Stack JavaScript/TypeScript</div>
+
+  <div class="contact">
+    <span>lausofimarce@gmail.com</span>
+    <span>Buenos Aires - Argentina.</span>
+  </div>
+  <div class="links">
+    <a href="https://www.linkedin.com/in/laura-marcenaro/">LinkedIn</a>
+    <a href="https://github.com/Azrux">Github</a>
+  </div>
+
+  <p class="summary">
+    Ingeniera de Software con más de 3 años de experiencia construyendo y manteniendo productos SaaS para
+    startups de Estados Unidos. Especializada en el ecosistema JavaScript/TypeScript, trabajando con
+    arquitecturas React, Node.js y GraphQL. Actualmente enfocada en desarrollo asistido por IA: construyo el
+    tooling de agentes de mi equipo &mdash; skills propias, agentes de review y deploy, e integraciones vía MCP &mdash;
+    y hago debugging de funcionalidades de producto basadas en LLMs. Experiencia en desarrollo de producto,
+    migraciones de sistemas, plataformas de suscripción e integraciones de datos/BI. Conocida por su fuerte
+    sentido de responsabilidad, capacidad de resolución de problemas y colaboración efectiva en equipos remotos.
+  </p>
+
+  <h2>Habilidades Técnicas</h2>
+  <div class="skills">
+    <p><b>Frontend:</b> React, Next.js, TypeScript, Redux, TailwindCSS</p>
+    <p><b>Backend:</b> Node.js, NestJS, GraphQL, Prisma, PostgreSQL, MongoDB</p>
+    <p><b>IA / GenAI:</b> Agentes LLM (Cursor, Claude), integración MCP, diseño de skills de agentes, prompt engineering, code review y evaluación asistidos por IA, OpenAI API</p>
+    <p><b>Cloud e Infraestructura:</b> AWS Serverless</p>
+    <p><b>Datos y BI:</b> DBT, Metabase, Starburst, Fivetran</p>
+    <p><b>Auth y Pagos:</b> Stripe, Auth0, Clerk</p>
+    <p><b>Herramientas:</b> Git, Postman, Linear, Miro</p>
+  </div>
+
+  <h2>Experiencia Profesional</h2>
+
+  <div class="job">
+    <p class="job-title">Software Engineer (Mar 2026 - Presente) - Embeddables, EE.UU. (Remoto)</p>
+    <ul>
+      <li>Lidero la plataforma de desarrollo asistido por IA del equipo: creé skills reutilizables y agentes
+        personalizados (PR review, deploy a producción, trazado de cambios) para Cursor/Claude, integrados vía
+        MCP con GitHub y Linear.</li>
+      <li>Diseñé un flujo de debugging basado en traces para el asistente LLM de producción, correlacionando
+        traces de ejecución, selección de tools y parámetros para hacer root-cause de respuestas incorrectas.</li>
+      <li>Construyo y mantengo funcionalidades y correcciones en toda la plataforma, dando soporte a la
+        estabilidad y escalabilidad continua del producto.</li>
+      <li>Trabajo de forma multifuncional con equipos de producto y de cara al cliente para entregar soluciones
+        escalables a clientes de salud en EE.UU.</li>
+      <li>Colaboro estrechamente con plataformas EHR/EMR para integrar sistemas de salud en soluciones web de cara al cliente.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <p class="job-title">Frontend Engineer (Mar 2025 - Mar 2026) - Embeddables, EE.UU. (Remoto)</p>
+    <ul>
+      <li>Trabajé directamente con clientes para implementar soluciones web a medida usando JavaScript y CSS a través de la plataforma low-code de la empresa.</li>
+      <li>Construí y personalicé componentes de UI avanzados para requerimientos no estándar de clientes.</li>
+      <li>Asistí a compañeros de equipo en implementaciones complejas, incluyendo integraciones de API y resolución de problemas técnicos.</li>
+      <li>Colaboré entre equipos para entregar soluciones escalables y mantenibles para proyectos de clientes.</li>
+      <li>Integré sistemas EHR/EMR en soluciones de salud de cara al cliente.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <p class="job-title">Full Stack Software Engineer (Mar 2023 - Feb 2025) - Trades.org, EE.UU. (Remoto).</p>
+    <ul>
+      <li>Desarrollé funcionalidades de frontend y backend para plataformas SaaS usando React, Node.js, GraphQL y PostgreSQL.</li>
+      <li>Construí una librería de componentes reutilizable con Storybook para estandarizar el desarrollo de UI entre proyectos.</li>
+      <li>Migré el sitio web de la empresa de JavaScript a TypeScript, mejorando la mantenibilidad y la experiencia de desarrollo.</li>
+      <li>Lideré los esfuerzos de migración de backend de PostgreSQL a MongoDB y contribuí a una arquitectura de microservicios usando Apollo Federation.</li>
+      <li>Diseñé e implementé un sistema de suscripción y facturación usando Stripe.</li>
+      <li>Migré el sistema de autenticación de Auth0 a Clerk.</li>
+      <li>Planifiqué y lideré una iniciativa de Business Intelligence con el equipo de Marketing usando DBT, Metabase, Starburst y Fivetran.</li>
+    </ul>
+  </div>
+
+  <div class="job tight">
+    <p class="job-title">Full Stack Teaching Assistant (Sep 2022 - May 2023) - Bootcamp SoyHenry, Buenos Aires, Argentina.</p>
+    <ul>
+      <li>Mentoreé estudiantes durante el programa de Desarrollo Web Full Stack.</li>
+      <li>Asistí con debugging, decisiones de arquitectura y ejercicios de código.</li>
+      <li>Facilité el aprendizaje colaborativo a través de pair programming y resolución de problemas grupal.</li>
+      <li>Propuse mejoras a los procesos internos del bootcamp.</li>
+    </ul>
+  </div>
+
+  <div class="tight">
+    <h2>Educación Profesional</h2>
+    <div class="edu">
+      <p><b>Bootcamp Henry · Desarrollo Web Full Stack</b></p>
+      <p>2022</p>
+    </div>
+
+    <h2>Idiomas</h2>
+    <ul>
+      <li>Inglés - Competencia profesional</li>
+      <li>Español - Nativo</li>
+    </ul>
+  </div>
+
+</body>
+</html>
