@@ -4,149 +4,326 @@
 <meta charset="utf-8">
 <title>Laura Sofía Marcenaro — CV</title>
 <style>
-  @page { size: A4; margin: 18mm 16mm; }
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --ink:        #1e2329;
+    --soft:       #3c444d;
+    --muted:      #737d88;
+    --accent:     #34409e;   /* indigo */
+    --accent-ink: #2a3379;
+    --tint:       #eef0fb;
+    --rule:       #e4e7ec;
+    --page:       #ffffff;
+  }
+
+  @page { size: A4; margin: 10mm 13mm; }
   * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
   body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10pt;
-    line-height: 1.4;
-    color: #1a1a1a;
-    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.34;
+    color: var(--soft);
+    background: var(--page);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
-  h1 {
-    text-align: center;
-    font-size: 20pt;
-    margin: 0 0 2pt;
-  }
-  .subtitle {
-    text-align: center;
-    font-weight: bold;
-    font-size: 11pt;
-    margin: 0 0 10pt;
-  }
-  .contact {
+  a { color: inherit; text-decoration: none; }
+
+  /* ------------------------------------------------ masthead */
+  .masthead {
     display: flex;
     justify-content: space-between;
-    font-size: 10pt;
-    margin: 0 4pt;
+    align-items: flex-end;
+    gap: 28pt;
   }
-  .links {
-    text-align: center;
-    margin: 2pt 0 12pt;
+  .name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 21pt;
+    letter-spacing: -0.4pt;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.1;
+    white-space: nowrap;
   }
-  .links a { color: #1155cc; text-decoration: underline; margin: 0 4pt; }
-  .summary { text-align: justify; margin: 0 0 14pt; }
-  h2 {
+  .role {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
     font-size: 10.5pt;
-    text-transform: uppercase;
-    letter-spacing: 0.3pt;
-    margin: 14pt 0 6pt;
+    color: var(--accent);
+    margin-top: 4pt;
   }
-  .skills p { margin: 0 0 2pt; }
-  .job { margin: 0 0 10pt; }
-  .job-title { font-weight: bold; margin: 0 0 3pt; }
-  ul { margin: 0; padding-left: 18pt; }
-  li { margin: 0 0 2pt; }
-  .edu p { margin: 0; }
-  .tight { page-break-inside: avoid; }
+  .contact {
+    text-align: right;
+    font-size: 8.6pt;
+    color: var(--muted);
+    line-height: 1.55;
+    white-space: nowrap;
+  }
+  .contact div { display: flex; align-items: center; justify-content: flex-end; gap: 6pt; }
+  .contact svg { width: 10px; height: 10px; fill: var(--accent); flex: none; }
+  .contact a { display: inline-flex; align-items: center; gap: 6pt; color: inherit; text-decoration: none; }
+
+  .divider {
+    height: 1.5pt;
+    background: var(--accent);
+    border: 0;
+    border-radius: 2pt;
+    margin: 6pt 0 0;
+  }
+
+  /* ------------------------------------------------ sections */
+  section { margin-top: 5pt; }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 10pt;
+    margin-bottom: 4pt;
+  }
+  .sec-head h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 9pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    color: var(--accent-ink);
+    margin: 0;
+    flex: none;
+  }
+  .sec-head::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .summary { margin: 0; }
+  .summary b { color: var(--ink); font-weight: 600; }
+
+  /* ------------------------------------------------ skills */
+  .skills {
+    display: grid;
+    grid-template-columns: 74pt 1fr;
+    gap: 4.5pt 14pt;
+  }
+  .skills dt {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 8.8pt;
+    color: var(--accent);
+    padding-top: 0.5pt;
+  }
+  .skills dd { margin: 0; color: var(--soft); }
+
+  /* ------------------------------------------------ experience */
+  .job { margin-bottom: 9pt; page-break-inside: avoid; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 14pt;
+    margin-bottom: 1pt;
+  }
+  .job-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 10pt;
+    color: var(--ink);
+  }
+  .job-org { color: var(--muted); font-weight: 400; }
+  .job-org b { color: var(--accent); font-weight: 500; }
+  .job-dates {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8.4pt;
+    font-weight: 500;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  ul { margin: 3pt 0 0; padding-left: 0; list-style: none; }
+  li {
+    position: relative;
+    padding-left: 13pt;
+    margin-bottom: 1.7pt;
+    color: var(--soft);
+  }
+  li:last-child { margin-bottom: 0; }
+  li::before {
+    content: "";
+    position: absolute;
+    left: 2pt;
+    top: 5pt;
+    width: 3pt;
+    height: 3pt;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  li b { color: var(--ink); font-weight: 600; }
+
+  /* ------------------------------------------------ projects */
+  .projects { display: flex; flex-direction: column; gap: 4pt; }
+  .project { page-break-inside: avoid; }
+  .project-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .project-desc { color: var(--soft); }
+  .project-meta {
+    font-size: 8.3pt;
+    color: var(--muted);
+    margin-top: 1.5pt;
+  }
+  .project-meta a { color: var(--accent); }
+
+  /* ------------------------------------------------ footer grid */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 24pt;
+  }
+  .fg-line { color: var(--soft); }
+  .fg-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2pt;
+    color: var(--accent-ink);
+    display: block;
+    margin-bottom: 3pt;
+  }
+  .fg-line b { font-family: 'Space Grotesk', sans-serif; color: var(--ink); font-weight: 600; }
+  .fg-line .dim { color: var(--muted); }
 </style>
 </head>
 <body>
 
-  <h1>Laura Sofía Marcenaro</h1>
-  <div class="subtitle">Software Engineer | Full Stack JavaScript/TypeScript</div>
+  <header class="masthead">
+    <div>
+      <h1 class="name">Laura Sofía Marcenaro</h1>
+      <div class="role">Software Engineer · Full Stack JavaScript / TypeScript</div>
+    </div>
+    <div class="contact">
+      <div>
+        <a href="mailto:lausofimarce@gmail.com" target="_blank" rel="noopener"><span>lausofimarce@gmail.com</span><svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.4l8 5 8-5V6H4zm16 2.9-8 5-8-5V18h16V8.9z"/></svg></a></div>
+      <div>
+        <span>Buenos Aires, Argentina</span>
+        <svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/laura-marcenaro/" target="_blank" rel="noopener"><span>linkedin.com/in/laura-marcenaro</span><svg viewBox="0 0 24 24"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.5 8.5h3V21h-3V8.5zm5 0h2.88v1.71h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59V21h-3v-5.16c0-1.23-.02-2.81-1.71-2.81-1.71 0-1.97 1.34-1.97 2.72V21h-3V8.5z"/></svg></a></div>
+      <div>
+        <a href="https://github.com/Azrux" target="_blank" rel="noopener"><span>github.com/Azrux</span><svg viewBox="0 0 24 24"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7 0-.7 0-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.3v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z"/></svg></a></div>
+    </div>
+  </header>
+  <hr class="divider">
 
-  <div class="contact">
-    <span>lausofimarce@gmail.com</span>
-    <span>Buenos Aires - Argentina.</span>
-  </div>
-  <div class="links">
-    <a href="https://www.linkedin.com/in/laura-marcenaro/">LinkedIn</a>
-    <a href="https://github.com/Azrux">Github</a>
-  </div>
+  <section>
+    <div class="sec-head"><h2>Summary</h2></div>
+    <p class="summary">
+      Software Engineer with <b>3+ years</b> shipping SaaS products for U.S. startups across the
+      <b>JavaScript / TypeScript</b> stack (React, Node.js, GraphQL). Now working AI-native: I build my team's
+      <b>agent tooling</b> — custom skills, PR-review and deploy agents, an <b>MCP server</b> — and debug
+      <b>LLM-driven product features</b>. I own features end to end and have led backend and data migrations, working fully remote.
+    </p>
+  </section>
 
-  <p class="summary">
-    Software Engineer with 3+ years of experience building and maintaining SaaS products for U.S.-based startups.
-    Specialized in the JavaScript/TypeScript ecosystem, working across React, Node.js, and GraphQL architectures.
-    Currently focused on AI-assisted development: building my team's agent tooling &mdash; custom skills, review and
-    deploy agents, and MCP integrations &mdash; and debugging LLM-driven product features. Experienced in product
-    development, system migrations, subscription platforms, and data/BI integrations. Known for strong ownership,
-    problem-solving skills, and effective collaboration in remote teams.
-  </p>
+  <section>
+    <div class="sec-head"><h2>Technical Skills</h2></div>
+    <dl class="skills">
+      <dt>Languages</dt><dd>TypeScript, JavaScript, SQL</dd>
+      <dt>Frontend</dt><dd>React, Next.js, Redux, Tailwind CSS</dd>
+      <dt>Backend</dt><dd>Node.js, NestJS, GraphQL, REST APIs, Prisma, PostgreSQL, MongoDB</dd>
+      <dt>Cloud &amp; Data</dt><dd>AWS Serverless, dbt, Metabase, Fivetran</dd>
+      <dt>AI / GenAI</dt><dd>LLM agents (Cursor, Claude), MCP servers &amp; clients, prompt engineering, AI-assisted code review</dd>
+    </dl>
+  </section>
 
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <p><b>Frontend:</b> React, Next.js, TypeScript, Redux, TailwindCSS</p>
-    <p><b>Backend:</b> Node.js, NestJS, GraphQL, Prisma, PostgreSQL, MongoDB</p>
-    <p><b>AI / GenAI:</b> LLM agents (Cursor, Claude), MCP integration, agent skill design, prompt engineering, AI-assisted code review &amp; evaluation, OpenAI API</p>
-    <p><b>Cloud &amp; Infrastructure:</b> AWS Serverless</p>
-    <p><b>Data &amp; BI:</b> DBT, Metabase, Starburst, Fivetran</p>
-    <p><b>Auth &amp; Payments:</b> Stripe, Auth0, Clerk</p>
-    <p><b>Tools:</b> Git, Postman, Linear, Miro</p>
-  </div>
+  <section>
+    <div class="sec-head"><h2>Professional Experience</h2></div>
 
-  <h2>Professional Experience</h2>
-
-  <div class="job">
-    <p class="job-title">Software Engineer (Mar 2026 - Present) - Embeddables, USA (Remote)</p>
-    <ul>
-      <li>Lead the team's AI-assisted development platform: authored reusable agent skills and custom agents
-        (PR review, production deploy, change tracing) for Cursor/Claude, integrated via MCP with GitHub and Linear.</li>
-      <li>Built a tracing-based workflow to debug the production LLM assistant, correlating execution traces,
-        tool selection, and parameters to root-cause incorrect responses.</li>
-      <li>Build and maintain features and fixes across the platform while supporting ongoing product stability and scalability.</li>
-      <li>Work cross-functionally with product and customer-facing teams to deliver scalable solutions for U.S.-based healthcare clients.</li>
-      <li>Collaborate closely with EHR/EMR platforms to integrate healthcare systems into client-facing web solutions.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <p class="job-title">Frontend Engineer (Mar 2025 - Mar 2026) - Embeddables, USA (Remote)</p>
-    <ul>
-      <li>Worked directly with clients to implement custom web solutions using JavaScript and CSS through the company's low-code platform.</li>
-      <li>Built and customized advanced UI components to meet non-standard client requirements.</li>
-      <li>Assisted teammates with complex implementations including API integrations and technical troubleshooting.</li>
-      <li>Collaborated across teams to deliver scalable and maintainable solutions for client projects.</li>
-      <li>Integrated EHR/EMR systems into client-facing healthcare solutions.</li>
-    </ul>
-  </div>
-
-  <div class="job">
-    <p class="job-title">Full Stack Software Engineer (Mar 2023 - Feb 2025) - Trades.org, USA (Remote).</p>
-    <ul>
-      <li>Developed frontend and backend features for SaaS platforms using React, Node.js, GraphQL, and PostgreSQL.</li>
-      <li>Built a reusable component library with Storybook to standardize UI development across projects.</li>
-      <li>Migrated the company website from JavaScript to TypeScript, improving maintainability and developer experience.</li>
-      <li>Led backend migration efforts from PostgreSQL to MongoDB and contributed to a microservices architecture using Apollo Federation.</li>
-      <li>Designed and implemented a subscription and billing system using Stripe.</li>
-      <li>Migrated the authentication system from Auth0 to Clerk.</li>
-      <li>Planned and led a Business Intelligence initiative with the Marketing team using DBT, Metabase, Starburst, and Fivetran.</li>
-    </ul>
-  </div>
-
-  <div class="job tight">
-    <p class="job-title">Full Stack Teaching Assistant (Sep 2022 - May 2023) - SoyHenry Bootcamp, Buenos Aires, Argentina.</p>
-    <ul>
-      <li>Mentored students during the Full Stack Web Development program.</li>
-      <li>Assisted with debugging, architecture decisions, and coding exercises.</li>
-      <li>Facilitated collaborative learning through pair programming and group problem-solving.</li>
-      <li>Proposed improvements to internal bootcamp processes.</li>
-    </ul>
-  </div>
-
-  <div class="tight">
-    <h2>Professional Education</h2>
-    <div class="edu">
-      <p><b>Henry Bootcamp — Full Stack Web Development</b></p>
-      <p>2022</p>
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-title">Software Engineer</span> <span class="job-org">— <b>Embeddables</b> · USA (Remote)</span></div>
+        <div class="job-dates">Mar 2026 – Present</div>
+      </div>
+      <ul>
+        <li><b>Lead the team's AI-assisted development platform</b>: authored reusable agent skills and custom agents (PR review, production deploy, change tracing) for Cursor and Claude.</li>
+        <li><b>Built the company's remote MCP server</b> — Next.js API routes, stateless Streamable HTTP, OAuth 2.0 + PKCE — exposing ~10 authenticated tools that give Cursor and Claude access to project data without repo access.</li>
+        <li>Designed a <b>trace-based debugging workflow</b> for the production LLM assistant, correlating execution traces, tool selection, and parameters to root-cause incorrect responses.</li>
+        <li>Ship features across the platform and integrate EHR/EMR systems into client-facing solutions for U.S. healthcare clients.</li>
+      </ul>
     </div>
 
-    <h2>Languages</h2>
-    <ul>
-      <li>English - Professional Working Proficiency</li>
-      <li>Spanish - Native</li>
-    </ul>
-  </div>
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-title">Frontend Engineer</span> <span class="job-org">— <b>Embeddables</b> · USA (Remote)</span></div>
+        <div class="job-dates">Mar 2025 – Mar 2026</div>
+      </div>
+      <ul>
+        <li>Delivered custom web solutions and advanced UI components for clients on the company's low-code platform (JavaScript, CSS).</li>
+        <li>Supported teammates on complex implementations, including API integrations and technical troubleshooting.</li>
+        <li>Integrated EHR/EMR systems into client-facing healthcare solutions.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-title">Full Stack Software Engineer</span> <span class="job-org">— <b>Trades.org</b> · USA (Remote)</span></div>
+        <div class="job-dates">Mar 2023 – Feb 2025</div>
+      </div>
+      <ul>
+        <li>Built frontend and backend features for SaaS platforms with React, Node.js, GraphQL, and PostgreSQL; created a reusable Storybook component library and migrated the site to TypeScript.</li>
+        <li><b>Led the backend migration</b> from PostgreSQL to MongoDB and contributed to a microservices architecture with Apollo Federation.</li>
+        <li>Shipped a subscription and billing system with Stripe; migrated authentication from Auth0 to Clerk.</li>
+        <li>Led a Business Intelligence initiative with Marketing (dbt, Metabase, Starburst, Fivetran).</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="job-title">Full Stack Teaching Assistant</span> <span class="job-org">— <b>SoyHenry Bootcamp</b> · Buenos Aires, Argentina</span></div>
+        <div class="job-dates">Sep 2022 – May 2023</div>
+      </div>
+      <ul>
+        <li>Mentored students in the Full Stack Web Development program (debugging, architecture, pair programming) and proposed improvements to internal processes.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Selected Projects</h2></div>
+    <div class="projects">
+      <div class="project">
+        <span class="project-name">Pokémon Quiz</span> <span class="project-desc">— real-time multiplayer word game with accounts and a cross-device leaderboard.</span>
+        <div class="project-meta">React · TypeScript · Zustand · Node.js · Socket.IO · PostgreSQL &nbsp;·&nbsp; <a href="https://pokemon-quiz.lausofimarce.workers.dev" target="_blank" rel="noopener">pokemon-quiz.lausofimarce.workers.dev</a></div>
+      </div>
+      <div class="project">
+        <span class="project-name">Spotify Lyrics PiP</span> <span class="project-desc">— floating, always-on-top desktop window with time-synced Spotify lyrics.</span>
+        <div class="project-meta">Electron · Node.js · OAuth PKCE · GitHub Actions &nbsp;·&nbsp; <a href="https://github.com/Azrux/spotify-lyrics-pip" target="_blank" rel="noopener">github.com/Azrux/spotify-lyrics-pip</a></div>
+      </div>
+      <div class="project">
+        <span class="project-name">Countries!</span> <span class="project-desc">— SPA to browse and filter world countries, with i18n and light/dark theming.</span>
+        <div class="project-meta">React · TypeScript &nbsp;·&nbsp; <a href="https://countries-no-db.onrender.com" target="_blank" rel="noopener">countries-no-db.onrender.com</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="footer-grid">
+      <div>
+        <span class="fg-label">Education</span>
+        <div class="fg-line"><b>Henry Bootcamp</b> <span class="dim">— Full-Stack Web Development · 2022</span></div>
+      </div>
+      <div>
+        <span class="fg-label">Languages</span>
+        <div class="fg-line"><b>English</b> <span class="dim">(professional)</span> · <b>Spanish</b> <span class="dim">(native)</span></div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>

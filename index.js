@@ -139,7 +139,7 @@ function responsiveMenu() {
       'contact.send': 'Enviar',
       'contact.autoresponse': 'Gracias por dejar tu mensaje. Lo voy a estar leyendo a la brevedad ☺',
       'footer.text': 'Con <span>♥</span> Lau - 2026',
-      cv: 'assets/Laura-Marcenaro-CV-ES.pdf',
+      cv: 'assets/Laura-Marcenaro-Software-Engineer-CV-ES.pdf',
     },
     en: {
       'nav.home': 'HOME',
@@ -217,7 +217,7 @@ function responsiveMenu() {
       'contact.send': 'Send',
       'contact.autoresponse': "Thanks for reaching out! I'll get back to you soon ☺",
       'footer.text': 'Made with <span>♥</span> Lau - 2026',
-      cv: 'assets/Laura-Marcenaro-CV.pdf',
+      cv: 'assets/Laura-Marcenaro-Software-Engineer-CV.pdf',
     },
   };
 
